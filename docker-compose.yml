@@ -1,0 +1,13 @@
+version: "3.9"
+services:
+    flutter-sdk:
+        image: "bilborda/flutter-sdk"
+        build:
+            context: .
+            dockerfile: docker/flutter.sdk.dockerfile
+            args:
+                FLUTTER_SDK: 2.0.4
+    devel-sdk:
+        image: "bilborda/flutter-sdk"
+        stdin_open: true
+        tty: true
